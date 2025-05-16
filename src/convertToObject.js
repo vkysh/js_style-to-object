@@ -6,7 +6,7 @@
  * @return {object}
  */
 function convertToObject(sourceString) {
-  let declarations = sourceString.split(';');
+  let declarations = sourceString.split(';').filter(declaration => declaration.trim() !== '');
   const result = {};
 
   declarations = declarations.map(function (declaration) {
